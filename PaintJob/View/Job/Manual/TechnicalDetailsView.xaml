@@ -3,10 +3,668 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PaintJob.View.Job.Manual"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="{DynamicResource MaterialDesignDarkBackground}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         mc:Ignorable="d"
-        Title="TechnicalDetailsView" Height="450" Width="800">
+        WindowStyle="None"
+        WindowState="Maximized"
+        Title="TechnicalDetailsView" Height="1050" Width="1680">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PasswordBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ComboBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image 
+            Grid.Column="1" 
+            Source="/PaintJob;component/Logo/selemix.jpg" 
+            Stretch="UniformToFill">
+        </Image>
+
+        <TextBlock
+            Text="Technical details"
+            FontSize="50"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontFamily="/Fonts/#Poppins"
+            Style="{StaticResource MaterialDesignHeadline1TextBlock}">
+        </TextBlock>
+
+        <StackPanel Margin="100">
+
+            <Label Content="Water in system"
+                   FontSize="40"
+                   FontFamily="/Fonts/#Poppins">
+            </Label>
+
+            <ComboBox
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="40"
+                FontFamily="/Fonts/#Poppins"
+                x:Name="WaterInSystem"
+                Height="100"
+                Width="600">
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Empty"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}">
+                </ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Service"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+            </ComboBox>
+
+            <Label Content="Air pressure/bar"
+                   FontSize="40"
+                   FontFamily="/Fonts/#Poppins">
+            </Label>
+
+            <ComboBox
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="40"
+                FontFamily="/Fonts/#Poppins"
+                x:Name="AirPressure"
+                Height="100"
+                Width="600">
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Service"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="0.5"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1.5"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="2"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="2.5"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="3"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="3.5"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="4"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+            </ComboBox>
+
+            <Label Content="Gun air pressure/min"
+                   FontSize="40"
+                   FontFamily="/Fonts/#Poppins">
+            </Label>
+
+            <ComboBox
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="40"
+                FontFamily="/Fonts/#Poppins"
+                x:Name="GunAirPressure"
+                Height="100"
+                Width="600">
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Min"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Max"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="10"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="15"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="20"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="25"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="30"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="35"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="40"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="45"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="50"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="55"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="60"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+            </ComboBox>
+
+            <Label Content="Gun paint flow/min"
+                   FontSize="40"
+                   FontFamily="/Fonts/#Poppins">
+            </Label>
+
+            <ComboBox
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                FontSize="40"
+                FontFamily="/Fonts/#Poppins"
+                x:Name="GunPaintFlow"
+                Height="100"
+                Width="600">
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Min"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="Max"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="60"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="120"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="180"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="240"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="300"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="360"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="420"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="480"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="540"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="600"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="660"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="720"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="780"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="840"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="900"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="960"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1020"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1080"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1140"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+                <ComboBoxItem
+                    Background="White"
+                    FontSize="50"                  
+                    Height="200"
+                    Width="600"
+                    Content="1200"
+                    FontFamily="/Fonts/#Poppins"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Style="{StaticResource MaterialDesignDataGridComboBoxItemStyle}"></ComboBoxItem>
+
+            </ComboBox>
+
+            <Label Content="Temperature"
+                   FontSize="40"
+                   FontFamily="/Fonts/#Poppins">
+            </Label>
+
+            <TextBox Height="75"
+                    Width="600"
+                    x:Name="Temperature"
+                    Text=""
+                    FontSize="50"
+                    FontFamily="/Fonts/#Poppins"
+                    Style="{StaticResource MaterialDesignTextBox}">
+            </TextBox>
+
+        </StackPanel>
+
+        <!-- Test StackPanel Margin="100">
+            <ComboBox
+                Width="600"
+                Height="200"
+                x:Name="cmbColors">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel >
+                            <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
+                            <TextBlock Text="{Binding Name}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel-->
+
+        <StackPanel Grid.Column="1"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Button                
+                    x:Name="Save"
+                    Content="Save" 
+                    Width="300" 
+                    Height="150"
+                    FontFamily="/Fonts/#Poppins"
+                    FontSize="50"
+                    Click="Save_Click"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Background="Black">
+            </Button>
+
+        </StackPanel>
+
     </Grid>
 </Window>

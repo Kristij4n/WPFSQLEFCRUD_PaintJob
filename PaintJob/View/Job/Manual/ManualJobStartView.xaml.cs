@@ -44,7 +44,8 @@ namespace PaintJob.View.Job.Manual
 
         private void TechnicalDetails_Click(object sender, RoutedEventArgs e)
         {
-
+            TechnicalDetailsView TechnicalDetailsView = new TechnicalDetailsView();
+            TechnicalDetailsView.Show();
         }
 
         private void WastedMaterial_Click(object sender, RoutedEventArgs e)

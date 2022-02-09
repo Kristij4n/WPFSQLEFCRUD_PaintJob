@@ -1,0 +1,814 @@
+﻿<UserControl x:Class="PaintJob.View.Job.JobView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PaintJob"
+             mc:Ignorable="d">
+
+    <!-- View separation -->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="127" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="127" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="127" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="127" />
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="500" />
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+
+        <!-- View separation -->
+
+        <!-- App name -->
+        
+        <!-- Mapping MaterialDesign trough view -->
+        <RadioButton Content="Logout"
+                     Grid.Row="0"
+                     Grid.Column="0"
+                     x:Name="Logout"
+                     Height="50"
+                     Width="80"
+                     Foreground="White"
+                     FontSize="14"
+                     Click="Logout_Click"
+                     Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                     FontFamily="/Fonts/#Poppins"/>
+
+        <RadioButton Content="test"
+                     Grid.Row="11"
+                     Grid.Column="0"
+                     x:Name="test"
+                     Height="150"
+                     Width="80"
+                     Foreground="White"
+                     FontSize="14"
+                     Click="test_Click"
+                     Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}"
+                     FontFamily="/Fonts/#Poppins"/>
+
+        <TextBlock Text="PaintJob Management"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="9"
+                   FontSize="20"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <!-- App name -->
+
+        <!-- Information for all text input -->
+
+        <TextBlock Text="Basic information"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   FontSize="12"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"/>
+
+        <TextBlock Text="Preparation"
+                   Grid.Row="1"
+                   Grid.Column="3"
+                   FontSize="12"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"/>
+
+        <TextBlock Text="Techincal details"
+                   Grid.Row="1"
+                   Grid.Column="5"
+                   FontSize="12"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"/>
+
+        <TextBlock Text="Other information"
+                   Grid.Row="1"
+                   Grid.Column="7"
+                   FontSize="12"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"/>
+
+        <!-- Information for all text input -->
+
+        <!-- Basic information name -->
+
+        <TextBlock Text="Id"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Worker"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Machine name"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Construction"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Element"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Paint job date"
+                   Grid.Row="7"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Color code"
+                   Grid.Row="8"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Preparation"
+                   Grid.Row="9"
+                   Grid.Column="1"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <!-- Basic information name -->
+
+        <!-- Preparation name -->
+
+        <TextBlock Text="Clean construction"
+                   Grid.Row="2"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Clean elements"
+                   Grid.Row="3"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Color quantity"
+                   Grid.Row="4"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Thinner quantity"
+                   Grid.Row="5"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Hardener quantity"
+                   Grid.Row="6"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Mix quantity"
+                   Grid.Row="7"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Prefilter M3"
+                   Grid.Row="8"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Filter M3"
+                   Grid.Row="9"
+                   Grid.Column="3"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <!-- Preparation name -->
+
+        <!-- Techical detail name -->
+
+        <TextBlock Text="Air pressure"
+                   Grid.Row="2"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Water in system"
+                   Grid.Row="3"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Gun color pressure"
+                   Grid.Row="4"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Gun air pressure"
+                   Grid.Row="5"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Gun angle"
+                   Grid.Row="6"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Temperature"
+                   Grid.Row="7"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Wind"
+                   Grid.Row="8"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Outside job"
+                   Grid.Row="9"
+                   Grid.Column="5"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <!-- Techincal detail name -->
+
+        <!-- Other information name -->
+
+        <TextBlock Text="Ratio"
+                   Grid.Row="2"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Work hours"
+                   Grid.Row="3"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Used mix quantity"
+                   Grid.Row="4"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Wasted mix quantity"
+                   Grid.Row="5"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Clean gun quantity"
+                   Grid.Row="6"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Grain effect"
+                   Grid.Row="7"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Color repair"
+                   Grid.Row="8"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <TextBlock Text="Comment"
+                   Grid.Row="9"
+                   Grid.Column="7"
+                   Margin="5,8"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Padding="3" />
+
+        <!-- Other information name -->
+
+        <!-- Basic information input -->
+
+        <TextBox Name="Id"
+                 Grid.Row="2"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Id, Mode=TwoWay}" />
+
+        <TextBox Name="Worker"
+                 Grid.Row="3"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Worker, Mode=TwoWay}" />
+
+        <TextBox Name="MachineName"
+                 Grid.Row="4"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.MachineName, Mode=TwoWay}" />
+
+        <TextBox Name="Construction"
+                 Grid.Row="5"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Construction, Mode=TwoWay}" />
+
+        <TextBox Name="Element"
+                 Grid.Row="6"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Element, Mode=TwoWay}" />
+
+        <TextBox Name="PaintJobDate"
+                 Grid.Row="7"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.PaintJobDate, Mode=TwoWay}" />
+
+        <TextBox Name="ColorCode"
+                 Grid.Row="8"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.ColorCode, Mode=TwoWay}" />
+
+        <TextBox Name="Preparation"
+                 Grid.Row="9"
+                 Grid.Column="2"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Preparation, Mode=TwoWay}" />
+
+        <!-- Basic information input -->
+
+        <!-- Preparation input -->
+
+        <TextBox Name="CleanConstruction"
+                 Grid.Row="2"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.CleanConstruction, Mode=TwoWay}" />
+
+        <TextBox Name="CleanElements"
+                 Grid.Row="3"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.CleanElements, Mode=TwoWay}" />
+
+        <TextBox Name="ColorQuantity"
+                 Grid.Row="4"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.ColorQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="ThinnerQuantity"
+                 Grid.Row="5"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.ThinnerQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="HardenerQuantity"
+                 Grid.Row="6"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.HardenerQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="MixQuantity"
+                 Grid.Row="7"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.MixQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="PrefilterM3"
+                 Grid.Row="8"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.PrefilterM3, Mode=TwoWay}" />
+
+        <TextBox Name="FilterM3"
+                 Grid.Row="9"
+                 Grid.Column="4"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.FilterM3, Mode=TwoWay}" />
+
+        <!-- Preparation input -->
+
+        <!-- Techical information input -->
+
+        <TextBox Name="AirPressure"
+                 Grid.Row="2"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.AirPressure, Mode=TwoWay}" />
+
+        <TextBox Name="WaterInSystem"
+                 Grid.Row="3"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.WaterInSystem, Mode=TwoWay}" />
+
+        <TextBox Name="GunColorPressure"
+                 Grid.Row="4"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.GunColorPressure, Mode=TwoWay}" />
+
+        <TextBox Name="GunAirPressure"
+                 Grid.Row="5"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.GunAirPressure, Mode=TwoWay}" />
+
+        <TextBox Name="GunAngle"
+                 Grid.Row="6"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.GunAngle, Mode=TwoWay}" />
+
+        <TextBox Name="Temperature"
+                 Grid.Row="7"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Temperature, Mode=TwoWay}" />
+
+        <TextBox Name="Wind"
+                 Grid.Row="8"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Wind, Mode=TwoWay}" />
+
+        <TextBox Name="OutsideJob"
+                 Grid.Row="9"
+                 Grid.Column="6"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.OutsideJob, Mode=TwoWay}" />
+
+        <!-- Techical information input -->
+
+        <!-- Other information input -->
+
+        <TextBox Name="Ratio"
+                 Grid.Row="2"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Ratio, Mode=TwoWay}" />
+
+        <TextBox Name="WorkHours"
+                 Grid.Row="3"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.WorkHours, Mode=TwoWay}" />
+
+        <TextBox Name="UsedMixQuantity"
+                 Grid.Row="4"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.UsedMixQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="WastedMixQuantity"
+                 Grid.Row="5"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.WastedMixQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="CleanGunQuantity"
+                 Grid.Row="6"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.CleanGunQuantity, Mode=TwoWay}" />
+
+        <TextBox Name="GrainEffect"
+                 Grid.Row="7"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.GrainEffect, Mode=TwoWay}" />
+
+        <TextBox Name="ColorRepair"
+                 Grid.Row="8"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.ColorRepair, Mode=TwoWay}" />
+
+        <TextBox Name="Comment"
+                 Grid.Row="9"
+                 Grid.Column="8"
+                 Margin="5,8"
+                 Padding="3"
+                 Style="{StaticResource MaterialDesignTextBox}"
+                 Text="{Binding Path=CurrentJob.Comment, Mode=TwoWay}" />
+
+        <!-- Other information input -->
+
+        <!-- Operations -->
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="10"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="9">
+            <Button Name="btnAdd"
+                    Content="ADD"
+                    Margin="5,8"
+                    Padding="3"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Command="{Binding Path=SaveCommand}" />
+            <Button Name="btnSearch"
+                    Content="SEARCH"
+                    Margin="5,8"
+                    Padding="3"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Command="{Binding Path=SearchCommand}" />
+            <Button Name="btnUpdate"
+                    Content="UPDATE"
+                    Margin="5,8"
+                    Padding="3"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Command="{Binding Path=UpdateCommand}" />
+            <Button Name="btnDelete"
+                    Content="DELETE"
+                    Margin="5,8"
+                    Padding="3"
+                    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                    Command="{Binding Path=DeleteCommand}" />
+        </StackPanel>
+        
+        <!-- Operations -->
+
+        <!-- Operation/Error report -->
+
+        <TextBlock Name="txtBlockMessage"
+                   Grid.Row="12"
+                   Margin="10,8"
+                   Padding="3"
+                   Style="{StaticResource MaterialDesignTextBlock}"
+                   Text="{Binding Path=Message}" Grid.ColumnSpan="9" />
+        
+        <!-- Operation/Error report -->
+
+        <!-- All Jobs -->
+
+        <!-- Basic information -->
+
+        <DataGrid Name="dgBasic"
+                  AutoGenerateColumns="False"
+                  Grid.Row="11"
+                  Grid.Column="1"
+                  Margin="5,8,11.875,8"
+                  Padding="3"
+                  Style="{StaticResource MaterialDesignDataGrid}"
+                  ItemsSource="{Binding Path=JobsList, Mode=TwoWay}" Grid.ColumnSpan="8">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Id"
+                                    Width="auto"
+                                    Binding="{Binding Path=Id}" />
+                <DataGridTextColumn Header="Worker"
+                                    Width="auto"
+                                    Binding="{Binding Path=Worker}" />
+                <DataGridTextColumn Header="Machine name"
+                                    Width="auto"
+                                    Binding="{Binding Path=MachineName}" />
+                <DataGridTextColumn Header="Construction"
+                                    Width="auto"
+                                    Binding="{Binding Path=Construction}" />
+                <DataGridTextColumn Header="Element"
+                                    Width="auto"
+                                    Binding="{Binding Path=Element}" />
+                <DataGridTextColumn Header="Paint job date"
+                                    Width="auto"
+                                    Binding="{Binding Path=PaintJobDate}" />
+                <DataGridTextColumn Header="Color code"
+                                    Width="auto"
+                                    Binding="{Binding Path=ColorCode}" />
+                <DataGridTextColumn Header="Preparation"
+                                    Width="auto"
+                                    Binding="{Binding Path=Preparation}" />
+
+        <!-- Basic information -->
+
+        <!-- Preparation -->
+
+                <DataGridTextColumn Header="Clean construction"
+                                    Width="auto"
+                                    Binding="{Binding Path=CleanConstruction}" />
+                <DataGridTextColumn Header="Clean elements"
+                                    Width="auto"
+                                    Binding="{Binding Path=CleanElements}" />
+                <DataGridTextColumn Header="Color quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=ColorQuantity}" />
+                <DataGridTextColumn Header="Thinner quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=ThinnerQuantity}" />
+                <DataGridTextColumn Header="Hardener quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=HardenerQuantity}" />
+                <DataGridTextColumn Header="Mix quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=MixQuantity}" />
+                <DataGridTextColumn Header="Prefilter M3"
+                                    Width="auto"
+                                    Binding="{Binding Path=PrefilterM3}" />
+                <DataGridTextColumn Header="Filter M3"
+                                    Width="auto"
+                                    Binding="{Binding Path=FilterM3}" />
+
+        <!-- Preparation -->
+
+        <!-- Techical details -->
+
+                <DataGridTextColumn Header="Air pressure"
+                                    Width="auto"
+                                    Binding="{Binding Path=AirPressure}" />
+                <DataGridTextColumn Header="Water in system"
+                                    Width="auto"
+                                    Binding="{Binding Path=WaterInSystem}" />
+                <DataGridTextColumn Header="Gun color pressure"
+                                    Width="auto"
+                                    Binding="{Binding Path=GunColorPressure}" />
+                <DataGridTextColumn Header="Gun air pressure"
+                                    Width="auto"
+                                    Binding="{Binding Path=GunAirPressure}" />
+                <DataGridTextColumn Header="Gun angle"
+                                    Width="auto"
+                                    Binding="{Binding Path=GunAngle}" />
+                <DataGridTextColumn Header="Temperature"
+                                    Width="auto"
+                                    Binding="{Binding Path=Temperature}" />
+                <DataGridTextColumn Header="Wind"
+                                    Width="auto"
+                                    Binding="{Binding Path=Wind}" />
+                <DataGridTextColumn Header="Outside job"
+                                    Width="auto"
+                                    Binding="{Binding Path=OutsideJob}" />
+
+        <!-- Techical details -->
+
+        <!-- Other information -->
+
+                <DataGridTextColumn Header="Ratio"
+                                    Width="auto"
+                                    Binding="{Binding Path=Ratio}" />
+                <DataGridTextColumn Header="Work hours"
+                                    Width="auto"
+                                    Binding="{Binding Path=WorkHours}" />
+                <DataGridTextColumn Header="Used mix quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=UsedMixQuantity}" />
+                <DataGridTextColumn Header="Wasted mix quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=WastedMixQuantity}" />
+                <DataGridTextColumn Header="Clean gun quantity"
+                                    Width="auto"
+                                    Binding="{Binding Path=CleanGunQuantity}" />
+                <DataGridTextColumn Header="Grain effect"
+                                    Width="auto"
+                                    Binding="{Binding Path=GrainEffect}" />
+                <DataGridTextColumn Header="Color repair"
+                                    Width="auto"
+                                    Binding="{Binding Path=ColorRepair}" />
+                <DataGridTextColumn Header="Comment"
+                                    Width="auto"
+                                    Binding="{Binding Path=Comment}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Other information -->
+
+        <!-- All Jobs -->
+
+    </Grid>
+</UserControl>

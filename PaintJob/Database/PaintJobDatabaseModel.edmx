@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PaintJobDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Administrator" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jobs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Worker" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MachineName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Construction" Type="int" Nullable="false" />
+          <Property Name="Element" Type="int" Nullable="false" />
+          <Property Name="PaintJobDate" Type="datetime" Nullable="false" />
+          <Property Name="ColorCode" Type="int" Nullable="false" />
+          <Property Name="Preparation" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CleanConstruction" Type="int" Nullable="false" />
+          <Property Name="CleanElements" Type="int" Nullable="false" />
+          <Property Name="ColorQuantity" Type="int" Nullable="false" />
+          <Property Name="ThinnerQuantity" Type="int" Nullable="false" />
+          <Property Name="HardenerQuantity" Type="int" Nullable="false" />
+          <Property Name="MixQuantity" Type="int" Nullable="false" />
+          <Property Name="PrefilterM3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FilterM3" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AirPressure" Type="int" Nullable="false" />
+          <Property Name="WaterInSystem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="GunColorPressure" Type="int" Nullable="false" />
+          <Property Name="GunAirPressure" Type="int" Nullable="false" />
+          <Property Name="GunAngle" Type="int" Nullable="false" />
+          <Property Name="Temperature" Type="int" Nullable="false" />
+          <Property Name="Wind" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OutsideJob" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ratio" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkHours" Type="int" Nullable="false" />
+          <Property Name="UsedMixQuantity" Type="int" Nullable="false" />
+          <Property Name="WastedMixQuantity" Type="int" Nullable="false" />
+          <Property Name="CleanGunQuantity" Type="int" Nullable="false" />
+          <Property Name="GrainEffect" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ColorRepair" Type="int" Nullable="false" />
+          <Property Name="Comment" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PaintJobDbModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jobs" EntityType="Self.Jobs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PaintJobDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Administrator" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Worker" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MachineName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Construction" Type="Int32" Nullable="false" />
+          <Property Name="Element" Type="Int32" Nullable="false" />
+          <Property Name="PaintJobDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ColorCode" Type="Int32" Nullable="false" />
+          <Property Name="Preparation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CleanConstruction" Type="Int32" Nullable="false" />
+          <Property Name="CleanElements" Type="Int32" Nullable="false" />
+          <Property Name="ColorQuantity" Type="Int32" Nullable="false" />
+          <Property Name="ThinnerQuantity" Type="Int32" Nullable="false" />
+          <Property Name="HardenerQuantity" Type="Int32" Nullable="false" />
+          <Property Name="MixQuantity" Type="Int32" Nullable="false" />
+          <Property Name="PrefilterM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FilterM3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AirPressure" Type="Int32" Nullable="false" />
+          <Property Name="WaterInSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GunColorPressure" Type="Int32" Nullable="false" />
+          <Property Name="GunAirPressure" Type="Int32" Nullable="false" />
+          <Property Name="GunAngle" Type="Int32" Nullable="false" />
+          <Property Name="Temperature" Type="Int32" Nullable="false" />
+          <Property Name="Wind" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OutsideJob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ratio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="WorkHours" Type="Int32" Nullable="false" />
+          <Property Name="UsedMixQuantity" Type="Int32" Nullable="false" />
+          <Property Name="WastedMixQuantity" Type="Int32" Nullable="false" />
+          <Property Name="CleanGunQuantity" Type="Int32" Nullable="false" />
+          <Property Name="GrainEffect" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ColorRepair" Type="Int32" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="PaintJobDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="Jobs" EntityType="Self.Job" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PaintJobDbModelStoreContainer" CdmEntityContainer="PaintJobDbEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="PaintJobDbModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Administrator" ColumnName="Administrator" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="PaintJobDbModel.Job">
+              <MappingFragment StoreEntitySet="Jobs">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Worker" ColumnName="Worker" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="Construction" ColumnName="Construction" />
+                <ScalarProperty Name="Element" ColumnName="Element" />
+                <ScalarProperty Name="PaintJobDate" ColumnName="PaintJobDate" />
+                <ScalarProperty Name="ColorCode" ColumnName="ColorCode" />
+                <ScalarProperty Name="Preparation" ColumnName="Preparation" />
+                <ScalarProperty Name="CleanConstruction" ColumnName="CleanConstruction" />
+                <ScalarProperty Name="CleanElements" ColumnName="CleanElements" />
+                <ScalarProperty Name="ColorQuantity" ColumnName="ColorQuantity" />
+                <ScalarProperty Name="ThinnerQuantity" ColumnName="ThinnerQuantity" />
+                <ScalarProperty Name="HardenerQuantity" ColumnName="HardenerQuantity" />
+                <ScalarProperty Name="MixQuantity" ColumnName="MixQuantity" />
+                <ScalarProperty Name="PrefilterM3" ColumnName="PrefilterM3" />
+                <ScalarProperty Name="FilterM3" ColumnName="FilterM3" />
+                <ScalarProperty Name="AirPressure" ColumnName="AirPressure" />
+                <ScalarProperty Name="WaterInSystem" ColumnName="WaterInSystem" />
+                <ScalarProperty Name="GunColorPressure" ColumnName="GunColorPressure" />
+                <ScalarProperty Name="GunAirPressure" ColumnName="GunAirPressure" />
+                <ScalarProperty Name="GunAngle" ColumnName="GunAngle" />
+                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+                <ScalarProperty Name="Wind" ColumnName="Wind" />
+                <ScalarProperty Name="OutsideJob" ColumnName="OutsideJob" />
+                <ScalarProperty Name="Ratio" ColumnName="Ratio" />
+                <ScalarProperty Name="WorkHours" ColumnName="WorkHours" />
+                <ScalarProperty Name="UsedMixQuantity" ColumnName="UsedMixQuantity" />
+                <ScalarProperty Name="WastedMixQuantity" ColumnName="WastedMixQuantity" />
+                <ScalarProperty Name="CleanGunQuantity" ColumnName="CleanGunQuantity" />
+                <ScalarProperty Name="GrainEffect" ColumnName="GrainEffect" />
+                <ScalarProperty Name="ColorRepair" ColumnName="ColorRepair" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="PaintJobDbModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

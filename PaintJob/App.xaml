@@ -1,0 +1,116 @@
+﻿<Application x:Class="PaintJob.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PaintJob"
+             
+             xmlns:viewModelJS="clr-namespace:PaintJob.ViewModel.Job"
+             xmlns:viewModelMJS="clr-namespace:PaintJob.ViewModel.Job.Manual"
+             
+             xmlns:viewModelRO="clr-namespace:PaintJob.ViewModel.Register"
+             xmlns:viewModelRU="clr-namespace:PaintJob.ViewModel.Register"
+             xmlns:viewModelRA="clr-namespace:PaintJob.ViewModel.Register"
+             
+             xmlns:viewModelU="clr-namespace:PaintJob.ViewModel.User"
+             xmlns:viewModeUJP="clr-namespace:PaintJob.ViewModel.User"
+             
+             xmlns:viewModelA="clr-namespace:PaintJob.ViewModel.Admin"
+             xmlns:viewModelAJP="clr-namespace:PaintJob.ViewModel.Admin"
+             xmlns:viewModelACC="clr-namespace:PaintJob.ViewModel.Admin"
+             
+             xmlns:viewJS="clr-namespace:PaintJob.View.Job"
+             xmlns:viewMJS="clr-namespace:PaintJob.View.Job.Manual"
+             
+             xmlns:viewRO="clr-namespace:PaintJob.View.Register"
+             xmlns:viewRU="clr-namespace:PaintJob.View.Register"
+             xmlns:viewRA="clr-namespace:PaintJob.View.Register"
+             
+             xmlns:viewU="clr-namespace:PaintJob.View.User"
+             xmlns:viewUJP="clr-namespace:PaintJob.View.User"
+             
+             xmlns:viewA="clr-namespace:PaintJob.View.Admin"
+             xmlns:viewAJP="clr-namespace:PaintJob.View.Admin"
+             xmlns:viewACC="clr-namespace:PaintJob.View.Admin"
+             
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Startup="Application_Startup">
+
+    <!-- Startup is login -->
+
+    <!-- Added Material design configuration -->
+    
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- Theme for JobMainView -->
+
+                <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
+
+                <!-- Theme for JobMainView -->
+
+                <materialDesign:CustomColorTheme BaseTheme="Light" PrimaryColor="DimGray" SecondaryColor="Silver" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Added Material design configuration -->
+
+            <!-- Job VM,V -->
+            
+            <DataTemplate DataType="{x:Type viewModelJS:JobStartViewModel}">
+                <viewJS:JobStartView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelMJS:ManualJobStartViewModel}">
+                <viewMJS:ManualJobStartView/>
+            </DataTemplate>
+
+            <!-- Job VM,V -->
+
+            <!-- User VM,V -->
+
+            <DataTemplate DataType="{x:Type viewModelU:UserViewModel}">
+                <viewU:UserView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModeUJP:UserJobPreviewViewModel}">
+                <viewUJP:UserJobPreviewView/>
+            </DataTemplate>
+
+            <!-- User VM,V -->
+
+            <!-- Admin VM,V -->
+
+            <DataTemplate DataType="{x:Type viewModelA:AdminViewModel}">
+                <viewA:AdminView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelAJP:AdminJobPreviewViewModel}">
+                <viewAJP:AdminJobPreviewView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelACC:AccountsViewModel}">
+                <viewACC:AccountsView/>
+            </DataTemplate>
+
+            <!-- Admin VM,V -->
+
+            <!-- Register VM,V -->
+
+            <DataTemplate DataType="{x:Type viewModelRO:RegisterOptionsViewModel}">
+                <viewRO:RegisterOptionsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelRA:RegisterAdminViewModel}">
+                <viewRA:RegisterAdminView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelRU:RegisterUserViewModel}">
+                <viewRU:RegisterUserView/>
+            </DataTemplate>
+
+            <!-- Register VM,V -->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

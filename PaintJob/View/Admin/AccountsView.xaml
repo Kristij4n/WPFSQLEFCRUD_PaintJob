@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="PaintJob.View.Admin.AccountsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             xmlns:viewModel="clr-namespace:PaintJob.ViewModel"
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Background="LightGray">
+
+        <StackPanel 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <RadioButton
+                
+                    x:Name="UserPreview"
+                    Content="User preview" 
+                    Width="200" 
+                    Height="50"
+                    FontFamily="/Fonts/#Poppins"
+                    Click="UserPreview_Click"
+                    Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}">
+
+            </RadioButton>
+
+            <RadioButton
+                
+                    x:Name="AdminPreview"
+                    Content="Admin preview" 
+                    Width="200" 
+                    Height="50"
+                    FontFamily="/Fonts/#Poppins"
+                    Click="AdminPreview_Click"
+                    Style="{StaticResource MaterialDesignChoiceChipAccentOutlineRadioButton}">
+
+            </RadioButton>
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

@@ -205,3 +205,9 @@ PaintJob20220209_0054
 -tested inserting in sql
 TEST OK
 ***********************************************************************
+PaintJob20220216_1210
+
+-added input options for TechnicalDetails
+-tested inserting in sql
+TEST OK
+***********************************************************************

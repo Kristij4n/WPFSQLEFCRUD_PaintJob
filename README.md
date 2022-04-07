@@ -1,4 +1,7 @@
-# WPFSQLEFCRUD_PaintJob - app is work in progress!!!
+# WPFSQLEFCRUD_PaintJob - paused, move and build on new pc 
+
+20220704_2139 f5 test ok on new pc, create sql 
+
 Reduce paint waste using data from paint job
 PaintJob application
 
